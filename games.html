@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games Store</title>
+<link rel="stylesheet" href="games.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">GAMES<br><span>STORE</span></div>
+
+        <div class="back">‹</div>
+
+        <nav>
+
+            <button class="nav-item active" data-page="store">
+                <span>▱</span> Store
+            </button>
+
+            <button class="nav-item" data-page="library">
+                <span>▥</span> Library
+            </button>
+
+            <button class="nav-item" data-page="engine">
+                <span>◉</span> Game Engine
+            </button>
+
+            <button class="nav-item" data-page="fab">
+                <span>◈</span> Game Assets
+            </button>
+
+        </nav>
+
+        <div class="quick-title">QUICK LAUNCH</div>
+
+        <div class="quick-game">
+            <div class="valorant-img">V</div>
+            <span>VALORANT</span>
+        </div>
+
+        <div class="download-icon">↓</div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div class="search">
+                <span>⌕</span>
+                <input id="searchInput" type="text" placeholder="Search store">
+            </div>
+
+            <div class="top-nav">
+                <button class="top-link active-top">Discover</button>
+                <button class="top-link">Browse</button>
+                <button class="top-link">News</button>
+            </div>
+
+            <div class="header-actions">
+
+                <button>♡</button>
+                <button>♧</button>
+
+                <button id="cartButton">
+                    🛒<small id="cartCount">0</small>
+                </button>
+
+                <div class="divider"></div>
+
+                <button>☷</button>
+
+                <button class="profile" id="profileButton">
+                    B
+                    <i></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- STORE -->
+
+        <section id="storePage" class="page active-page">
+
+            <div class="hero">
+
+                <div class="hero-overlay">
+
+                    <div class="hero-small">GAMES STORE</div>
+
+                    <h1>
+                        END OF SUMMER<br>
+                        SALE
+                    </h1>
+
+                    <h2>Save up to 75%</h2>
+
+                    <p>Discover amazing games and incredible deals.</p>
+
+                    <button class="primary-btn">Shop Now</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="section-header">
+
+                <h2>Featured Games</h2>
+
+                <div>
+                    <button class="arrow">‹</button>
+                    <button class="arrow">›</button>
+                </div>
+
+            </div>
+
+
+            <div class="featured">
+
+                <div class="featured-main">
+
+                    <div class="game-art art1">
+
+                        <div class="art-content">
+
+                            <span>ADVENTURE</span>
+
+                            <h2>Borderlands 4</h2>
+
+                            <p>Explore. Fight. Loot.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side-games">
+
+                    <div class="mini-feature">
+
+                        <div class="mini-art art2"></div>
+
+                        <div>
+                            <h3>Zenless Zone Zero</h3>
+                            <p>Free to Play</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mini-feature selected">
+
+                        <div class="mini-art art3"></div>
+
+                        <div>
+                            <h3>Cyberpunk 2077</h3>
+                            <p>50% Off</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mini-feature">
+
+                        <div class="mini-art art4"></div>
+
+                        <div>
+                            <h3>Red Dead Redemption 2</h3>
+                            <p>40% Off</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="section-header">
+
+                <h2>Popular Games</h2>
+
+                <button class="view-all" onclick="showLibrary()">
+                    View All →
+                </button>
+
+            </div>
+
+
+            <div class="games-grid" id="gamesGrid">
+
+
+                <div class="game-card"
+                     data-name="Grand Theft Auto V"
+                     data-price="29.99">
+
+                    <div class="cover cover1"></div>
+
+                    <h3>Grand Theft Auto V</h3>
+
+                    <p>₹2,499</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+                <div class="game-card"
+                     data-name="Red Dead Redemption 2"
+                     data-price="39.99">
+
+                    <div class="cover cover2"></div>
+
+                    <h3>Red Dead Redemption 2</h3>
+
+                    <img src="https://www.google.com/imgres?q=rdr2%20logo&imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Freddeadredemption%2Fimages%2F0%2F0a%2FReddeadcover.jpg%2Frevision%2Flatest%3Fcb%3D20180503145113&imgrefurl=https%3A%2F%2Freddead.fandom.com%2Fwiki%2FRed_Dead_Redemption_2&docid=53CCbhtGukLFGM&tbnid=cZpC60_MwpC_LM&vet=12ahUKEwiQzqHmqOOWAxU4keEIHWX7I6MQnPAOegQISBAA..i&w=1280&h=1580&hcb=2&ved=2ahUKEwiQzqHmqOOWAxU4keEIHWX7I6MQnPAOegQISBAA"
+                         class="sale-icon"
+                         alt="Sale Icon">
+
+                    <p>₹2,999</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+                <div class="game-card"
+                     data-name="Cyberpunk 2077"
+                     data-price="34.99">
+
+                    <div class="cover cover3"></div>
+
+                    <h3>Cyberpunk 2077</h3>
+
+                    <p>₹2,999</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+                <div class="game-card"
+                     data-name="God of War"
+                     data-price="39.99">
+
+                    <div class="cover cover4"></div>
+
+                    <h3>God of War</h3>
+
+                    <p>₹3,299</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+                <div class="game-card"
+                     data-name="Spider-Man Remastered"
+                     data-price="44.99">
+
+                    <div class="cover cover5"></div>
+
+                    <h3>Spider-Man Remastered</h3>
+
+                    <p>₹3,499</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+                <div class="game-card"
+                     data-name="Forza Horizon 5"
+                     data-price="29.99">
+
+                    <div class="cover cover6"></div>
+
+                    <h3>Forza Horizon 5</h3>
+
+                    <p>₹2,499</p>
+
+                    <button class="add-btn">Add to Cart</button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="libraryPage" class="page">
+
+            <div class="page-title">
+                <h1>Library</h1>
+                <span>⟳</span>
+            </div>
+
+            <div class="library-tabs">
+
+                <button class="library-tab active">All</button>
+
+                <button class="library-tab">Favorites</button>
+
+                <button class="plus">+</button>
+
+            </div>
+
+
+            <div class="library-tools">
+
+                <div>
+                    Sort by:
+                    <strong>Recently Purchased⌄</strong>
+                </div>
+
+                <div class="view-icons">▦　☷</div>
+
+            </div>
+
+
+            <div class="library-grid">
+
+
+                <div class="library-card">
+
+                    <div class="library-cover cover1"></div>
+
+                    <h3>Grand Theft Auto V</h3>
+
+                    <p>↓ Install</p>
+
+                </div>
+
+
+                <div class="library-card">
+
+                    <div class="library-cover cover2"></div>
+
+                    <h3>Red Dead Redemption 2</h3>
+
+                    <p>↓ Install</p>
+
+                </div>
+
+
+                <div class="library-card">
+
+                    <div class="library-cover cover3"></div>
+
+                    <h3>Cyberpunk 2077</h3>
+
+                    <p>↓ Install</p>
+
+                </div>
+
+
+                <div class="library-card">
+
+                    <div class="library-cover cover4"></div>
+
+                    <h3>God of War</h3>
+
+                    <p>↓ Install</p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="enginePage" class="page">
+
+            <div class="engine-header">
+
+                <h1>Game Engine</h1>
+
+                <div class="engine-tabs">
+                    <span>News</span>
+                    <span>Samples</span>
+                    <span class="engine-active">Library</span>
+                    <span>Projects</span>
+                </div>
+
+            </div>
+
+
+            <div class="engine-version">
+
+                <h2>ENGINE VERSIONS</h2>
+
+                <div class="engine-box">
+
+                    <div class="engine-logo">G</div>
+
+                    <strong>5.7.4</strong>
+
+                    <button>Install</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="projects">
+
+                <h2>MY PROJECTS</h2>
+
+                <div class="no-projects">
+
+                    <h3>No projects found</h3>
+
+                    <p>Create your first game project.</p>
+
+                    <button class="primary-btn">Create Project</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="fabPage" class="page">
+
+            <div class="page-title">
+                <h1>Game Assets</h1>
+            </div>
+
+
+            <div class="fab-banner">
+
+                <h1>Build Your World</h1>
+
+                <p>Discover premium assets for your next game.</p>
+
+                <button class="primary-btn">Explore Assets</button>
+
+            </div>
+
+
+            <div class="section-header">
+                <h2>Popular Assets</h2>
+            </div>
+
+
+            <div class="asset-grid">
+
+                <div class="asset-card">
+                    🏰
+                    <h3>Fantasy Castle</h3>
+                </div>
+
+                <div class="asset-card">
+                    🚗
+                    <h3>Vehicle Pack</h3>
+                </div>
+
+                <div class="asset-card">
+                    🌲
+                    <h3>Nature Pack</h3>
+                </div>
+
+                <div class="asset-card">
+                    🏙️
+                    <h3>City Pack</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOWNLOADS -->
+
+        <section id="downloadsPage" class="page">
+
+            <div class="download-layout">
+
+                <aside class="download-menu">
+
+                    <button class="download-active">
+                        ↓　Overview
+                    </button>
+
+                    <button>
+                        ▣　Scheduled
+                    </button>
+
+                    <button>
+                        ⚑　Recently Updated
+                    </button>
+
+                    <hr>
+
+                    <button>
+                        ⚙　Download Settings
+                    </button>
+
+                </aside>
+
+
+                <div class="activity">
+
+                    <h1>Latest Activity</h1>
+
+                    <div class="no-activity">
+
+                        <div class="big-download">↓</div>
+
+                        <h2>No Activity</h2>
+
+                        <button class="primary-btn">
+                            Discover Games
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="settingsPage" class="page">
+
+            <div class="settings-header">
+                <span>‹</span>
+                <h3>SETTINGS</h3>
+            </div>
+
+
+            <div class="settings-content">
+
+                <h2>LANGUAGE</h2>
+
+                <div class="select-box">
+                    🌐　System Default - English (United States)　⌄
+                </div>
+
+
+                <h2>PREFERENCES</h2>
+
+
+                <label class="check">
+
+                    <input type="checkbox" checked>
+
+                    <span></span>
+
+                    Minimize To System Tray
+
+                </label>
+
+
+                <label class="check">
+
+                    <input type="checkbox" checked>
+
+                    <span></span>
+
+                    Run When My Computer Starts
+
+                </label>
+
+
+                <label class="check">
+
+                    <input type="checkbox">
+
+                    <span></span>
+
+                    Enable Debug Logging
+
+                </label>
+
+
+                <label class="check">
+
+                    <input type="checkbox">
+
+                    <span></span>
+
+                    Hide Game Library
+
+                </label>
+
+
+                <label class="check">
+
+                    <input type="checkbox" checked>
+
+                    <span></span>
+
+                    Enable Cloud Saves
+
+                </label>
+
+
+                <label class="check">
+
+                    <input type="checkbox">
+
+                    <span></span>
+
+                    Use Proxy
+
+                </label>
+
+
+                <h2>DOWNLOADS & INSTALLS</h2>
+
+                <p>Go to Download Settings</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ACCOUNT POPUP -->
+
+    <div class="account-menu" id="accountMenu">
+
+        <button>Manage Account</button>
+
+        <button>Redeem Code</button>
+
+        <button>Disable Single Sign-On</button>
+
+        <button>Sign Out</button>
+
+
+        <div class="account-bottom">
+
+            <div class="user-circle">●</div>
+
+            <span>Bhaavesh.G</span>
+
+            <i></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="games.js"></script>
+
+</body>
+</html>
